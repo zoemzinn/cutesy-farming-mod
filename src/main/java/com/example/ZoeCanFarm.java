@@ -5,8 +5,8 @@ import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class ExampleMod implements ModInitializer {
-	public static final String MOD_ID = "modid";
+public class ZoeCanFarm implements ModInitializer {
+	public static final String MOD_ID = "zoecanfarm";
 
 	// This logger is used to write text to the console and the log file.
 	// It is considered best practice to use your mod id as the logger's name.
@@ -19,6 +19,9 @@ public class ExampleMod implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 
-		LOGGER.info("Hello Fabric world!");
+		LOGGER.info("Hello Fabric world! Welcome to my first ever mod: Zoe Can Farm! If I can farm the way I want, so can you! Enjoy! :)");
+
+        ZoeCanFarmItems.initialize();
 	}
+
 }

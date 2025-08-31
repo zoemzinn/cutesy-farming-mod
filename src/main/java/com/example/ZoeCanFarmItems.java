@@ -13,7 +13,8 @@ import java.util.function.Function;
 
 public class ZoeCanFarmItems {
 
-    public static final Item SUSPICIOUS_SUBSTANCE = register("suspicious_substance", Item::new, new Item.Settings());
+    public static final Item BREAD_SLICE = register("bread_slice",
+            Item::new, new Item.Settings());
 
     public static Item register(String name, Function<Item.Settings, Item> itemFactory, Item.Settings settings) {
         // Create the item key.
@@ -33,7 +34,7 @@ public class ZoeCanFarmItems {
 
         // Get the event for modifying entries in the ingredients group.
         // And register an event handler that adds our suspicious item to the ingredients group.
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register((itemGroup) -> itemGroup.add(ZoeCanFarmItems.SUSPICIOUS_SUBSTANCE));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register((itemGroup) -> itemGroup.add(ZoeCanFarmItems.BREAD_SLICE));
 
     }
 
